@@ -3,42 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gymtogether Videozone</title>
+  <title>Gymtogether Trainingsvideo's</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      padding: 1rem;
-      background: #111;
-      color: white;
-      font-family: sans-serif;
+      padding: 0;
+      height: 100%;
+      background-color: #111;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    iframe {
+    .embed-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    iframe.wakeletEmbed {
+      width: 700px; /* aangepaste breedte */
+      max-width: 100%;
+      height: 100%;
       border: none;
     }
 
     @media screen and (max-width: 480px) {
-      .grid {
-        grid-template-columns: 1fr 1fr; /* blijft 2 naast elkaar op klein scherm */
+      .embed-container {
+        height: 150vh; /* extra ruimte voor meerdere rijen op klein scherm */
       }
     }
   </style>
 </head>
 <body>
-  <h2>Gymtogether Videozone</h2>
-  <div class="grid">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allowfullscreen></iframe>
-  </div>
-</body>
-</html>
+  <div class="embed-container">
+    <iframe
+      data-autoresize="false"
+      class="wakeletEmbed"
+      src="https://embed.wakelet.com/wakes/6--6P_JJGDC_Nl9Jgw9Or/grid?border=1&dark=1&hide-title=1"
+      allow="autoplay"
+    ></if
