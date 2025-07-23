@@ -11,10 +11,17 @@
         height: 100%;
         background-color: #111;
       }
+
       iframe {
         width: 100%;
-        height: 100%;
+        height: 100vh; /* vult het hele scherm */
         border: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        iframe {
+          height: 150vh; /* extra hoogte op mobiel zodat de 2 rijen goed passen */
+        }
       }
     </style>
   </head>
